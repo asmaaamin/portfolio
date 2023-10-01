@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ****Navbar*** */
+nav{
+  padding: 0 2rem;
+  width: 100%;
+}
+nav ul {
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: right;
+}
+nav ul li{
+  padding: 0 1rem;
+}
+a.active, a:hover{
+  color: #D1884F;
+}
+nav ul li a{
+  color: black;
+}
+#home{
+  color: #D1884F;
+}
+.icons{
+  font-size: 2.8rem;
+  color: #008AAA;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+/* ****Main saection**** */
+main{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 2rem;
+}
+/* ****Left side**** */
+.info{
+  margin: 0 2rem;
+}
+.welcome{
+  color: #3BBADB;
+}
+h1{
+  color: #008AAA;
+  margin: 2rem 0;
+}
+span{
+  color: #D1884F;
+}
+/* ****Buttons**** */
+.action{
+  display: flex;
+}
+.hireBtn{
+  background: #008AAA;
+  color: white;
+  border: #008AAA;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 5px 10px;
+  margin: 2rem 1rem;
+  cursor: pointer;
+}
+.projectsBtn{
+  background: white;
+  color: #008AAA;
+  border: 1px solid #008AAA;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 2rem 1rem;
+  cursor: pointer;
+}
+/* ****Right saection**** */
+.picSection{
+  width: 40%;
+  margin: 0 2rem;
+}
+.picBackground{
+  background: #008AAA;
+  width: 300px;
+  height: 300px;
+  border-radius: 0 0 0 150px;
+  
+}
+.picBackground img{
+  width: 300px;
+  height: 300px;
+  border-radius: 0 0 0 150px;
+  margin: .5rem
+}
+
+/* ****Breakpoints**** */
+@media only screen and (max-width: 768px){
+  main{
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+  }
+  nav{
+    display: none;
+  }
+  #check:checked~nav{
+    display: block;
+    margin-bottom: 2rem;
+  }
+  nav ul{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background: #008AAA;
+  }
+  nav ul li{
+    padding-bottom: .5rem;
+  }
+  nav ul li a{
+    color: white;
+  }
+  nav ul li i{
+    color: white;
+  }
+  .icons{
+    display: block;
+    float: right;
+  }
+  #check:checked~.icons #menu-icon{
+    display: none;
+  }
+  .icons #close-icon{
+    display: none;
+  }
+  #check:checked~.icons #close-icon{
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .action{
+    display: flex;
+    flex-direction: column;
+  }
+  .hireBtn{
+    margin: 2rem 1rem .5rem;
+  }
+  .projectsBtn{
+    margin: .5rem 1rem 2rem;
+  }
+}
